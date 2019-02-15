@@ -119,5 +119,6 @@ namespace ThinkSharp.Licensing
         }
 
         internal static readonly string NoSerialNumber = "NO_SERIAL_NO";
+        internal static readonly string ModelViewerSerialNumber = "SNMVT_00CD_NO00_0001";
     }
 }

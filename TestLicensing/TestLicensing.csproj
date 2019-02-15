@@ -33,8 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +48,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutLicenseBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutLicenseBox.Designer.cs">
+      <DependentUpon>AboutLicenseBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HardwareIdentifierTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\LicTest.cs" />
     <Compile Include="TSLShared\CheckSum.cs" />
     <Compile Include="TSLShared\CheckSumAppender.cs" />
     <Compile Include="TSLShared\Constants.cs" />
@@ -68,10 +78,14 @@
     <Compile Include="TSLShared\Licensing\SignedLicense.cs" />
     <Compile Include="TSLShared\Licensing\SignedLicenseEncryption.cs" />
     <Compile Include="TSLShared\Licensing\SignedLicenseException.cs" />
+    <Compile Include="TSLShared\Licensing\WindowsComputerIdentifierCreator.cs" />
     <Compile Include="TSLShared\Signing\ISigner.cs" />
     <Compile Include="TSLShared\Signing\RSA\RsaExtensions.cs" />
     <Compile Include="TSLShared\Signing\RSA\RsaSigner.cs" />
     <Compile Include="TSLShared\Signing\SigningKeyPair.cs" />
+    <EmbeddedResource Include="AboutLicenseBox.resx">
+      <DependentUpon>AboutLicenseBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

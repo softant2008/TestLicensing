@@ -156,6 +156,6 @@ namespace ThinkSharp.Licensing
             return CheckSumAppender.Verify(hardwareIdentifier);
         }
 
-        internal static readonly string NoHardwareIdentifier = "NO_HARDWARE_ID";
+        internal static readonly string NoHardwareIdentifier = "UNKNOWN";
     }
 }
